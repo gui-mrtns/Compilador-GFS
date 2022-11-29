@@ -1,23 +1,30 @@
-# Compilador GFS
+# Compilador GFS :computer:
+
+### Passo 0
+
+Antes de tudo, é necessário realizar a instalação de algumas ferramentas:
+1. [GNU](https://gcc.gnu.org/) (Compilador C/C++)
+2. [Flex](https://www.gnu.org/software/flex/) (Analisador léxico)
+3. [Bison](https://www.gnu.org/software/bison/) (Analisador sintático)
 
 ### Passo 1
 
-Baixar os arquivos `gfs.l` e `gfs.y` e movê-los para o mesmo diretório.
+Após as instalações, faça o download dos arquivos `gfs.l` `gfs.y` `main.gfs` e certifique-se de que estão em um diretório comum para a execução do projeto.
 
 ### Passo 2
 
-Abra o Prompt de Comando do Windows, acesse o diretório que contém os arquivos baixados e insira os seguintes comandos:
-1. `bison -d gfs.y`
-2. `flex gfs.l`
+Abra o Prompt de Comando do Windows, acesse o diretório em que os arquivos estão localizados, como por exemplo pelo comando `cd C:\Users\guilh\OneDrive\Desktop\GFS` e insira os seguintes comandos:
+`bison -d gfs.y`
+`flex gfs.l`
+O primeiro comando executa o Analisador Léxico e o segundo comando executa o Analisador Sintático. Com os dois comandos executados, surgirão três arquivos no diretório de trabalho: `gfs.tab.h` `gfs.tab.c` `lex.yy.c`.
 
 ### Passo 3
 
-Em seguida, insira o seguinte comando...
-`g++ lex.yy.c gfs.tab.c -o gfs.exe`
+Em seguida, insira o seguinte comando: `g++ lex.yy.c gfs.tab.c -o gfs.exe`. O arquivo executável gerado é o compilador.
 
 ### Passo 4
 
-Agora, crie o seu programa utilizando a linguagem GFS e salve-o com o nome que preferir e com a extensão `.gfs`. Segue um código exemplo:
+Agora, execute o compilador passando o arquivo do programa criado com a linguagem GFS como parâmetro. Segue o código de exemplo:
 ```
 inicio
 	inteiro i1 = 0;
@@ -28,20 +35,16 @@ inicio
 	}
 fim
 ```
+Comando: `gfs.exe main.gfs`
 
 ### Passo 5
 
-No Prompt de Comando insira o comando `gfs.exe main.gfs`.
+O passo anterior produzirá dois arquivos `file1.txt` (código traduzido para a linguagem `C++`) e `file2.txt` (reconhecimento dos tokens). Abra o arquivo gerado `file1.txt`, copie o seu texto e crie um arquivo `.cpp` contendo o texto copiado.
 
 ### Passo 6
 
-Abra o arquivo gerado `file1`, copie o seu texto e crie um arquivo `.cpp` contendo o texto copiado.
-
+No Prompt de Comando, insira o seguinte comando para compilar o programa `.cpp`: `g++ main.cpp -o main.exe`.
 
 ### Passo 7
 
-Insira o seguinte comando no Terminal: `g++ main.cpp -o main`
-
-### Passo 8
-
-Por fim, execute o arquivo `.exe` gerado.
+Por fim, execute o arquivo `main.exe` gerado pelo próprio Terminal e verifique a sua execução.
