@@ -1,4 +1,4 @@
-# Compilador GFS :computer:
+# :computer: Compilador GFS :mechanical_arm:
 
 ### Passo 0
 
@@ -47,4 +47,4 @@ No Prompt de Comando, insira o seguinte comando para compilar o programa `.cpp`:
 
 ### Passo 7
 
-Por fim, execute o arquivo `main.exe` gerado pelo próprio Terminal e verifique a sua execução.
+Por fim, execute o arquivo `main.exe` gerado pelo próprio Terminal e verifique a sua execução. :man_technologist:
