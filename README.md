@@ -1,5 +1,5 @@
 # :computer: Compilador GFS :mechanical_arm:
-Este projeto consiste na implementação integral de um compilador GFS. Realizou-se o projeto no segundo semestre de 2022 como parte da avaliação da disciplina “Compiladores” do curso de Engenharia de Computação da Universidade Federal de Itajubá (UNIFEI - _campus_ Itajubá).
+Este projeto implementa um compilador simples com análise léxica e sintática para uma linguagem de programação fictícia, utilizando ferramentas como Flex e Bison. Realizou-se o projeto no segundo semestre de 2022 como parte da avaliação da disciplina “Compiladores” do curso de Engenharia de Computação da Universidade Federal de Itajubá (UNIFEI - _campus_ Itajubá).
 
 ## Como executar?
 ### Passo 0
